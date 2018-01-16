@@ -15,6 +15,7 @@ gulp.task('default', ['clean'], () => {
 gulp.task('dev', [
   'html',
   'css',
+  'fonts',
   'js',
   'bundle-react-app'
 ], () => {
@@ -44,20 +45,25 @@ gulp.task('html', () => {
 
 gulp.task('css', () => {
   // create gulp-sass tasks if it needs
-  gulp.src('app/styles/**/*')
-  .pipe(gulp.dest('./dist/'));
+  gulp.src('app/styles/**/*.css')
+  .pipe(gulp.dest('./dist/styles'));
+})
+
+gulp.task('fonts', () => {
+  gulp.src('app/styles/fonts/**/*')
+  .pipe(gulp.dest('./dist/fonts'));
 })
 
 gulp.task('js', () => {
   // create JS minify & concat tasks if it needs
-  gulp.src('app/scripts/**/*.js')
-  .pipe(gulp.dest('./dist/'));
+  // gulp.src('app/scripts/**/*.js')
+  // .pipe(gulp.dest('./dist/'));
 })
 
 gulp.task('bundle-react-app', () => {
   return browserify({
       extensions: ['.js', '.jsx'],
-      entries: 'app/scripts/components/IndexApp.jsx',
+      entries: 'app/scripts/index.js',
       debug: true
     })
     .transform("babelify", {presets: ["es2015", "react"]})

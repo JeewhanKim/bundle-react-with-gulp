@@ -10,7 +10,7 @@ class SectionRefresh extends React.Component{
   }
   render(){
     return (
-      <section className={"wp-contents " + (this.props.selectedSection === 0 ? 'show' : 'hide')}>
+      <section className={"jee-contents " + (this.props.selectedSection === 0 ? 'show' : 'hide')}>
         <SubNav folderData={this.folderData}/>
         <MainNav folderData={this.folderData}/>
       </section>

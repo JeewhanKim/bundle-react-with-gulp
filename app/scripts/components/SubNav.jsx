@@ -4,8 +4,8 @@ const SubNavList = ({folderData}) => {
   const subNavClick = (e) => {
     const countryButton = $(e.currentTarget)
     countryButton.addClass('is-active').siblings().removeClass('is-active')
-    $(`.wp-contents-sub-country`).hide();
-    $(`.wp-contents-sub-country:eq(${countryButton.index()})`).show();
+    $(`.jee-contents-sub-country`).hide();
+    $(`.jee-contents-sub-country:eq(${countryButton.index()})`).show();
 
     if(localStorage !== undefined) localStorage['currentCountry'] = countryButton.index()
   }
@@ -26,7 +26,7 @@ class SubNav extends React.Component{
   render(){
     return (
       <section id="nav-countries">
-        <div className="tabs is-toggle is-fullwidth is-large wp-countries">
+        <div className="tabs is-toggle is-fullwidth is-large jee-countries">
           <ul>
             <SubNavList folderData={this.folderData} />
           </ul>

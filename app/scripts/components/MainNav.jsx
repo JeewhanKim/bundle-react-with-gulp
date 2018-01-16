@@ -61,7 +61,7 @@ const SubFolderList = ({countryCode, subFolders}) => {
 
 const FolderList = ({folderData}) => {
   return Object.keys(folderData).map((countryCode) => 
-    <section className="wp-contents-sub-country" id={`contents-`+countryCode} style={{display:`none`}} key={`sub-country-`+countryCode.toString()}>
+    <section className="jee-contents-sub-country" id={`contents-`+countryCode} style={{display:`none`}} key={`sub-country-`+countryCode.toString()}>
       <aside className="menu" key={`menu-`+countryCode.toString()}>
         <SubFolderList countryCode={countryCode} subFolders={Object.entries(folderData[countryCode])} />
       </aside>
@@ -76,7 +76,7 @@ class MainNav extends React.Component{
   }
   render() {
     return (
-      <section className="wp-contents-sub">
+      <section className="jee-contents-sub">
         <FolderList folderData={this.folderData} />
       </section>
     )

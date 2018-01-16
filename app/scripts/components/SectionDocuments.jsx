@@ -4,22 +4,22 @@ import React from 'react'
 class SectionDocuments extends React.Component{
   render(){
     return (
-      <section className={"wp-contents " + (this.props.selectedSection === 2 ? 'show' : 'hide')}>
+      <section className={"jee-contents " + (this.props.selectedSection === 2 ? 'show' : 'hide')}>
         <aside className="menu">
           <ul className="menu-list">
             <li>
-              <a target="_blank" href="https://mk-confluence.sparkred.com/display/EDE/Coding+Guide">
-                <span className="panel-icon"><i className="fa fa-book"></i></span>Confluence
+              <a target="_blank" href="#">
+                <span className="panel-icon"><i className="fa fa-book"></i></span>Section 3 Link 1
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://mk-confluence.sparkred.com/display/EDE/INT+Environment+Status">
-                <span className="panel-icon"><i className="fa fa-book"></i></span>INT Status
+              <a target="_blank" href="#">
+                <span className="panel-icon"><i className="fa fa-book"></i></span>Section 3 Link 2
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://mk-confluence.sparkred.com/display/EDE/Release+Notes">
-                <span className="panel-icon"><i className="fa fa-book"></i></span>Release Notes
+              <a target="_blank" href="#">
+                <span className="panel-icon"><i className="fa fa-book"></i></span>Section 3 Link 3
               </a>
             </li>
           </ul>
